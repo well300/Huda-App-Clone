@@ -35,7 +35,7 @@ const KnowUsMore = () => {
           Get Know Us
         </motion.h2>
         <motion.p
-  className="text-md text-gray-700 mb-12 px-4 md:px-24 sm:text-sm"
+  className="text-md text-[gray-700] mb-12 px-4 md:px-24 sm:text-sm"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 0.4, duration: 1 }}
@@ -48,7 +48,7 @@ There are many variations of passages of Lorem Ipsum
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {/* Box 1 - Customer */}
           <motion.div
-            className="bg-[#e7e7e7] p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
+            className="bg-[#0C5C59] bg-opacity-20 p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
             initial="hidden"
             animate="visible"
             variants={boxVariants}
@@ -71,7 +71,7 @@ There are many variations of passages of Lorem Ipsum
 
           {/* Box 2 - Country */}
           <motion.div
-            className="bg-[#e7e7e7] p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
+            className="bg-[#0C5C59] bg-opacity-20 p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
             initial="hidden"
             animate="visible"
             variants={boxVariants}
@@ -94,7 +94,7 @@ There are many variations of passages of Lorem Ipsum
 
           {/* Box 3 - Rating */}
           <motion.div
-            className="bg-[#e7e7e7] p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
+            className="bg-[#0C5C59] bg-opacity-20 p-6 rounded-lg shadow-lg text-center w-full sm:w-[18rem] h-[14rem] mx-auto flex flex-col justify-center items-center"
             initial="hidden"
             animate="visible"
             variants={boxVariants}
