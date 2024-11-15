@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/NavBar";
+import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import KeyFeatures from "./components/KeyFeatures";
 import InteractiveVid from "./components/InteractiveVid"
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       {/* Navbar Component */}
-      <Navbar />
+      <NavBar />
       
       <section id="home" className="pt-16 bg-white">
         <Home /> 
