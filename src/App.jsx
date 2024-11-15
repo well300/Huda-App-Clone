@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import KeyFeatures from "./components/KeyFeatures"
 
 const App = () => {
   return (
@@ -8,8 +9,12 @@ const App = () => {
       {/* Navbar Component */}
       <Navbar />
       
-      <section id="home" className="pt-16 pb-20 bg-white">
+      <section id="home" className="pt-16 bg-white">
         <Home /> {/* This will display your Home component */}
+      </section>
+
+      <section id="keyfeatures" className="pt-16 bg-white">
+        <KeyFeatures /> {/* This will display your Home component */}
       </section>
 
 

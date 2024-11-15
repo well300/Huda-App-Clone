@@ -1,50 +1,48 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/logoimg/logo.png'; // Update the path to your logo
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [prevScrollY, setPrevScrollY] = useState(0); // Track previous scroll position
-  const [isVisible, setIsVisible] = useState(true); // Track visibility of the navbar
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  const linkStyle = "text-white hover:text-[#FFEFA5] transition-colors duration-300";
-  const buttonBaseStyle = "px-6 py-3 font-semibold rounded-xl transition-all duration-300";
-  
-  // Button style for the "Sign Up" button
-  const buttonSignUpStyle = `${buttonBaseStyle}  mr-[120px] text-black bg-[#FFEFA5] hover:bg-[#0C5C59] hover:text-white border hover:border-white`;
+  const linkStyle = "text-white text-[15px] hover:text-[#FFEFA5] transition-colors duration-300";
+  const buttonBaseStyle = "px-5 py-2 lg:ml-[12px] text-[15px] font-semibold rounded-xl transition-all duration-300";
+  const buttonSignUpStyle = `${buttonBaseStyle} mr-[120px] text-black bg-[#FFEFA5] hover:bg-[#0C5C59] hover:text-white border hover:border-white`;
 
   // Framer Motion variants
   const linkVariants = { hover: { scale: 1.03 } };
   const dropdownVariants = { hidden: { opacity: 0, y: -40 }, visible: { opacity: 1, y: 0 } };
   const buttonVariants = { hidden: { opacity: 0, scale: 0.9 }, visible: { opacity: 1, scale: 1 } };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  // Scroll event handler
+  const handleScroll = useCallback(() => {
+    const currentScrollY = window.scrollY;
 
-      // Only hide the navbar when scrolling down and not at the top
-      if (currentScrollY > prevScrollY && currentScrollY > 50) {
-        setIsVisible(false); // Hide navbar when scrolling down and not at the top
-      } else if (currentScrollY < prevScrollY || currentScrollY === 0) {
-        setIsVisible(true); // Show navbar when scrolling up or at the top
-      }
+    if (currentScrollY > prevScrollY && currentScrollY > 50) {
+      setIsVisible(false); // Hide navbar when scrolling down and not at the top
+    } else if (currentScrollY < prevScrollY || currentScrollY === 0) {
+      setIsVisible(true); // Show navbar when scrolling up or at the top
+    }
 
-      // Update the previous scroll position
-      setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    setPrevScrollY(currentScrollY);
   }, [prevScrollY]);
 
-  // Function to handle link click and close the mobile menu
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   const handleLinkClick = (e, id) => {
-    e.preventDefault(); // Prevent default anchor click behavior
-    setIsOpen(false); // Close the mobile menu
+    e.preventDefault();
+    setIsOpen(false);
     const target = document.getElementById(id);
-    target.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section
+    target.scrollIntoView({ behavior: "smooth" });
   };
+
+  const menuItems = ["Home", "Key Features", "For Reverts", "Dawah Centers"];
 
   return (
     <motion.nav
@@ -54,7 +52,6 @@ const Navbar = () => {
     >
       <div className="w-full px-5 sm:px-8 md:px-24">
         <div className="flex justify-between items-center py-3">
-          {/* Logo */}
           <motion.div
             className="flex items-center md:ml-9" 
             initial={{ opacity: 0 }}
@@ -68,9 +65,9 @@ const Navbar = () => {
             />
           </motion.div>
 
-          {/* Center Links - Adjusted for right-alignment */}
-          <div className="hidden md:flex space-x-10 ml-[450px]"> {/* Add ml-auto to push the menu to the right */}
-            {["Home", "Key Features", "For Reverts", "Dawah Centers"].map((item) => (
+          {/* Center Links */}
+          <div className="hidden lg:flex space-x-10 ml-auto">
+            {menuItems.map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -83,8 +80,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Right-side "Sign Up" Button */}
-          <div className="hidden md:flex">
+          {/* "Sign Up" Button */}
+          <div className="hidden lg:flex">
             <motion.button
               className={buttonSignUpStyle}
               variants={buttonVariants}
@@ -99,7 +96,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu Button for mobile */}
           <button
-            className="md:hidden text-white focus:outline-none"
+            className="lg:hidden text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -132,14 +129,13 @@ const Navbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="fixed inset-0 bg-gradient-to-r from-[#087D72] to-[#0C5C59] text-white flex flex-col justify-center items-center md:hidden"
+              className="fixed inset-0 bg-gradient-to-r from-[#087D72] to-[#0C5C59] text-white flex flex-col justify-center items-center lg:hidden"
               initial="hidden"
               animate="visible"
               exit="hidden"
               variants={dropdownVariants}
               transition={{ duration: 0.2 }}
             >
-              {/* Logo inside dropdown */}
               <motion.div
                 className="flex justify-center mb-8"
                 initial={{ opacity: 0 }}
@@ -161,7 +157,7 @@ const Navbar = () => {
                 &times;
               </button>
 
-              {["Home", "Key Features", "For Reverts", "Dawah Centers"].map((item) => (
+              {menuItems.map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -174,7 +170,6 @@ const Navbar = () => {
                 </motion.a>
               ))}
 
-              {/* "Sign Up" Button in Mobile Menu */}
               <div className="mt-8 w-full flex flex-col items-center space-y-4 px-6">
                 <motion.button
                   className={`${buttonBaseStyle} text-white font-semibold border border-white hover:bg-white hover:text-[#087D72] w-full sm:w-auto`}
