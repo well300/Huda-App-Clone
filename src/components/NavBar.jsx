@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from '../assets/logoimg/logo.png'; // Update the path to your logo
 
-const Navbar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
@@ -205,4 +205,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
