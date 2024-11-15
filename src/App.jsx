@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar"
 import KeyFeatures from "./components/KeyFeatures";
 import InteractiveVid from "./components/InteractiveVid"
 import ForReverts from "./components/ForReverts"
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
         <Home /> 
       </section>
 
-      <section id="keyfeatures" className=" pt-24 bg-white">
+      <section id="keyfeatures" className="pt-16 bg-white">
         <KeyFeatures />
         <InteractiveVid />
       </section>
@@ -24,6 +25,9 @@ const App = () => {
         <ForReverts />
       </section>
 
+      <footer >
+       <Footer />
+      </footer>
 
 
     </div>
