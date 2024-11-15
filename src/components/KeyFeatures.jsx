@@ -6,7 +6,7 @@ import rightArrow from '../assets/right-arrow.svg'; // Assuming you have the rig
 const KeyFeatures = () => {
   return (
     <motion.section
-      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white mt-44 md:mt-0" // Added padding and margin for responsiveness
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white mt-56 md:mt-0" // Added padding and margin for responsiveness
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -22,7 +22,7 @@ const KeyFeatures = () => {
         <img
           src={gridLeftImage}
           alt="Grid Left"
-          className="w-5/6 sm:w-4/5 md:w-2/3 lg:w-1/2 h-auto mt-6 sm:mt-8 object-contain"
+          className="w-4/2 sm:w-4/5 md:w-3/4 lg:w-3/5 h-auto mt-6 sm:mt-8 object-contain" // Increased the width in larger screens
         />
       </motion.div>
 
@@ -34,36 +34,36 @@ const KeyFeatures = () => {
         transition={{ delay: 0.3, duration: 1 }}
       >
         {/* Section Header */}
-        <h3 className="text-xl md:text-2xl font-medium" style={{ fontSize: '24px' }}>
+        <h3 className="text-xl md:text-2xl font-medium" style={{ fontSize: '16px' }}>
           Key Features Section
         </h3>
 
         {/* Feature Title */}
         <h4
           className="text-lg md:text-xl font-semibold"
-          style={{ color: '#087D72' }}
+          style={{ color: '#087D72', fontSize: '24px' }}
         >
           Discover & Learn
         </h4>
 
         {/* Feature Description */}
         <p className="text-sm md:text-base" style={{ fontSize: '16px' }}>
-          Access a comprehensive library of <span style={{ color: '#087D72' }}>articles, videos, and audio</span> content about Islam. Explore answers to frequently asked questions and engage with a curated knowledge base.
+          Access a comprehensive library of <span style={{ color: '#087D72', fontWeight: 'bold'}}>articles, videos, and audio</span> content about Islam. Explore answers to frequently asked questions and engage with a curated knowledge base.
         </p>
 
         {/* Features List with Right Arrow Icons */}
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <img src={rightArrow} alt="Right Arrow" className="w-4 h-4" style={{ filter: 'invert(26%) sepia(74%) saturate(1600%) hue-rotate(145deg) brightness(89%) contrast(103%)' }} />
-            <span className="text-sm">Text & Articles</span>
+            <span className="text-sm font-semibold">Text & Articles</span>
           </div>
           <div className="flex items-center space-x-2">
             <img src={rightArrow} alt="Right Arrow" className="w-4 h-4" style={{ filter: 'invert(26%) sepia(74%) saturate(1600%) hue-rotate(145deg) brightness(89%) contrast(103%)' }} />
-            <span className="text-sm">Videos</span>
+            <span className="text-sm font-semibold">Videos</span>
           </div>
           <div className="flex items-center space-x-2">
             <img src={rightArrow} alt="Right Arrow" className="w-4 h-4" style={{ filter: 'invert(26%) sepia(74%) saturate(1600%) hue-rotate(145deg) brightness(89%) contrast(103%)' }} />
-            <span className="text-sm">Audios</span>
+            <span className="text-sm font-semibold">Audios</span>
           </div>
         </div>
       </motion.div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Home from "./components/Home";
 import KeyFeatures from "./components/KeyFeatures"
 
@@ -13,7 +13,7 @@ const App = () => {
         <Home /> {/* This will display your Home component */}
       </section>
 
-      <section id="keyfeatures" className="pt-16 bg-white">
+      <section id="keyfeatures" className=" bg-white">
         <KeyFeatures /> {/* This will display your Home component */}
       </section>
 
