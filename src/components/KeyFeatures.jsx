@@ -6,7 +6,7 @@ import rightArrow from '../assets/right-arrow.svg'; // Assuming you have the rig
 const KeyFeatures = () => {
   return (
     <motion.section
-      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white mt-56 md:mt-0" // Added padding and margin for responsiveness
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 bg-white mt-56 md:mt-0" // Added padding and margin for responsiveness
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -47,8 +47,8 @@ const KeyFeatures = () => {
         </h4>
 
         {/* Feature Description */}
-        <p className="text-sm md:text-base" style={{ fontSize: '16px' }}>
-          Access a comprehensive library of <span style={{ color: '#087D72', fontWeight: 'bold'}}>articles, videos, and audio</span> content about Islam. Explore answers to frequently asked questions and engage with a curated knowledge base.
+        <p className="text-sm md:text-base lg:mr-16"  style={{ fontSize: '16px' }}>
+          Access a comprehensive library of <span style={{ color: '#087D72', fontWeight: '16px'}}>articles, videos, and audio</span> content about Islam. Explore answers to frequently asked questions and engage with a curated knowledge base.
         </p>
 
         {/* Features List with Right Arrow Icons */}

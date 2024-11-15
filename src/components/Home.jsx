@@ -4,7 +4,6 @@ import hero1Image from "../assets/heroimg/hero1.png";
 import hero2Image from "../assets/heroimg/hero2.png";
 import googleStore from "../assets/storesimg/google_store.png";
 import appleStore from "../assets/storesimg/apple_store.png";
-import bgVector from "../assets/bgimg/bgVector.png";
 
 const Hero = () => {
   return (
