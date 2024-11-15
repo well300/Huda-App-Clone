@@ -6,7 +6,7 @@ import rightArrow from '../assets/right-arrow.svg'; // Assuming you have the rig
 const InteractiveVid = () => {
   return (
     <motion.section
-      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 bg-white md:mt-0" // Added padding and margin for responsiveness
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 pt-8 bg-white md:mt-0" // Added padding and margin for responsiveness
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "./components/NavBar";
 import Home from "./components/Home";
+import NavBar from "./components/NavBar"
 import KeyFeatures from "./components/KeyFeatures";
 import InteractiveVid from "./components/InteractiveVid"
 import ForReverts from "./components/ForReverts"
@@ -15,7 +15,7 @@ const App = () => {
         <Home /> 
       </section>
 
-      <section id="keyfeatures" className="pt-16 bg-white">
+      <section id="keyfeatures" className=" pt-24 bg-white">
         <KeyFeatures />
         <InteractiveVid />
       </section>

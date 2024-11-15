@@ -8,7 +8,7 @@ import appleStore from "../assets/storesimg/apple_store.png";
 const ForReverts = () => {
   return (
     <motion.section
-      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 bg-white md:mt-0"
+      className="w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 pt-16 bg-white md:mt-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
