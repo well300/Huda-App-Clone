@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import gridRightImage from '../assets/InteractiveVid.png';
+import gridRightImage from '../assets/interactiveVid.png';
 import rightArrow from '../assets/right-arrow.svg'; // Assuming you have the right arrow icon in this path
 
 const InteractiveVid = () => {
