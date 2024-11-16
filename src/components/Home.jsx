@@ -55,7 +55,7 @@ const Hero = () => {
 
         {/* Description */}
         <motion.p
-          className="text-lg"
+          className="text-lg text-justify"
           style={{ fontSize: "16px" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

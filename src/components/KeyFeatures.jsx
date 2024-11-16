@@ -47,7 +47,7 @@ const KeyFeatures = () => {
         </h4>
 
         {/* Feature Description */}
-        <p className="text-sm md:text-base lg:mr-16"  style={{ fontSize: '16px' }}>
+        <p className="text-sm md:text-base lg:mr-16 text-justify"  style={{ fontSize: '16px' }}>
           Access a comprehensive library of <span style={{ color: '#087D72', fontWeight: '16px'}}>articles, videos, and audio</span> content about Islam. Explore answers to frequently asked questions and engage with a curated knowledge base.
         </p>
 

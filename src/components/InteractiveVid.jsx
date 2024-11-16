@@ -43,7 +43,7 @@ const InteractiveVid = () => {
         </h4>
 
         {/* Feature Description */}
-        <p className="text-sm lg:ml-16 md:text-base" style={{ fontSize: '16px' }}>
+        <p className="text-sm lg:ml-16 md:text-base text-justify" style={{ fontSize: '16px' }}>
         Join live video sessions with esteemed scholars. Schedule appointments and participate in ongoing discussions.
         </p>
 

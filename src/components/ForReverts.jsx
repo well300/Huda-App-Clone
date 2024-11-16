@@ -49,7 +49,7 @@ const ForReverts = () => {
         </h4>
 
         {/* Feature Description */}
-        <p className="text-sm md:text-base lg:mr-16" style={{ fontSize: '16px' }}>
+        <p className="text-sm md:text-base lg:mr-16 text-justify" style={{ fontSize: '16px' }}>
           If you're interested in becoming a Muslim and have questions, you can connect with an available Da’ee (Islamic preacher) for guidance. Feel free to ask your questions, chat, or even have an audio or video call to get the answers you need. When you're ready, you can declare your Shahadah (the Islamic declaration of faith).
         </p>
 
